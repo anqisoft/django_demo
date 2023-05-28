@@ -1,0 +1,14 @@
+li a {
+    color: green;
+}
+/*
+body::before {
+  background: white url("images/background.png") no-repeat;
+  opacity: 0.5;
+}
+*/
+body {
+  background: white url("images/background.png") no-repeat;
+  background-position: center center;
+  opacity: 0.9;
+}

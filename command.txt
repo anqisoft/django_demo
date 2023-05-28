@@ -1,0 +1,176 @@
+======================================================================================================================================================================
+pip install Django grpcio grpcio-tools
+
+django-admin startproject myproject
+
+cd myproject
+python manage.py startapp myapp
+
+python manage.py runserver
+python manage.py runserver 8080
+python manage.py runserver 0.0.0.0:8000
+
+python manage.py migrate
+python manage.py makemigrations polls
+python manage.py sqlmigrate polls 0001
+python manage.py migrate
+
+python manage.py migrate
+python manage.py makemigrations demo1
+======================================================================================================================================================================
+P:
+cd P:\anqi\Desktop\tech\python\projects\django_demo\
+md tutorial
+cd tutorial
+======================================================================================================================================================================
+p: && CD P:\anqi\Desktop\tech\python\projects\django_demo
+venv\Scripts\activate
+======================================================================================================================================================================
+md tutorial01a && cd tutorial01a && django-admin startproject mysite && cd mysite && python manage.py runserver 8000
+======================================================================================================================================================================
+cd ..\..\ && md tutorial01b && cd tutorial01b && django-admin startproject mysite && cd mysite && python manage.py startapp polls && python manage.py runserver 8000
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i tutorial01b\*.* tutorial02a\  && cd tutorial02a\mysite
+python manage.py migrate && python manage.py makemigrations polls && python manage.py migrate
+python manage.py shell
+from polls.models import Choice, Question  # Import the model classes we just wrote.
+
+# No questions are in the system yet.
+Question.objects.all()
+
+# Create a new Question.
+# Support for time zones is enabled in the default settings file, so
+# Django expects a datetime with tzinfo for pub_date. Use timezone.now()
+# instead of datetime.datetime.now() and it will do the right thing.
+from django.utils import timezone
+q = Question(question_text="What's new?", pub_date=timezone.now())
+
+# Save the object into the database. You have to call save() explicitly.
+q.save()
+
+# Now it has an ID.
+q.id
+
+# Access model field values via Python attributes.
+q.question_text
+
+q.pub_date
+
+# Change values by changing the attributes, then calling save().
+q.question_text = "What's up?"
+q.save()
+
+# objects.all() displays all the questions in the database.
+Question.objects.all()
+
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i tutorial02a\*.* tutorial02b\  && cd tutorial02b\mysite
+python manage.py shell
+
+
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i tutorial02b\*.* tutorial02c\  && cd tutorial02c\mysite
+python manage.py createsuperuser
+python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i tutorial02c\*.* tutorial02d\ && cd tutorial02d\mysite
+
+python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i tutorial02d\*.* tutorial03a\ && cd tutorial03a\mysite && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i tutorial03a\*.* tutorial03b\ && cd tutorial03b\mysite && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i tutorial03b\*.* tutorial03c\ && cd tutorial03c\mysite && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i tutorial03c\*.* tutorial03d\ && cd tutorial03d\mysite && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial03d\*.* tutorial03e\ && cd tutorial03e\mysite && echo %cd% && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial03e\*.* tutorial03f\ && cd tutorial03f\mysite && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial03f\*.* tutorial03g\ && cd tutorial03g\mysite && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial03g\*.* tutorial04a\ && cd tutorial04a\mysite && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial04a\*.* tutorial04b\ && cd tutorial04b\mysite && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial04b\*.* tutorial05a\ && cd tutorial05a\mysite
+python manage.py shell
+python manage.py test polls
+python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial05a\*.* tutorial05b\ && cd tutorial05b\mysite
+python manage.py test polls
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial05b\*.* tutorial05c\ && cd tutorial05c\mysite
+python manage.py test polls
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial05c\*.* tutorial05d\ && cd tutorial05d\mysite && echo . >shell.txt && echo . >shell_and_result.txt
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial05d\*.* tutorial05e\ && cd tutorial05e\mysite && echo . >shell.txt && echo . >shell_and_result.txt
+python manage.py test polls
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial05e\*.* tutorial05f\ && cd tutorial05f\mysite && echo . >shell.txt && echo . >shell_and_result.txt
+python manage.py test polls
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial05f\*.* tutorial06a\ && cd tutorial06a\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial06a\*.* tutorial06b\ && cd tutorial06b\mysite && echo . >shell.txt && echo . >shell_and_result.txt
+python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial06b\*.* tutorial07a\ && cd tutorial07a\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial07a\*.* tutorial07b\ && cd tutorial07b\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial07b\*.* tutorial07c\ && cd tutorial07c\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial07c\*.* tutorial07d\ && cd tutorial07d\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial07d\*.* tutorial07e\ && cd tutorial07e\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial07e\*.* tutorial07f\ && cd tutorial07f\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial07f\*.* tutorial07g\ && cd tutorial07g\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial07g\*.* tutorial07h\ && cd tutorial07h\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+======================================================================================================================================================================
+cd ..\..\ && xcopy /y/s/e/i/q tutorial07h\*.* tutorial07i\ && cd tutorial07i\mysite && echo . >shell.txt && echo . >shell_and_result.txt && python manage.py runserver
+============================================================================================================================================================================================================================================================================================================================================
+python -m pip install django-debug-toolbar
+============================================================================================================================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================================================================================================================
+======================================================================================================================================================================
+参考语句
+cd ..\..\ && xcopy /y/s/e/i tutorial02a\*.* tutorial02b\  && cd tutorial02b\mysite
+python manage.py shell
+
+python manage.py runserver 8000
+
+cd ..\..\ && xcopy /y/s/e/i tutorial01b\*.* tutorial02a\  && cd tutorial02a\mysite
+python manage.py migrate && python manage.py makemigrations polls && python manage.py migrate
+python manage.py shell
+======================================================================================================================================================================
+https://docs.djangoproject.com/en/4.2/topics/
+https://docs.djangoproject.com/en/4.2/
+https://www.djangoproject.com/start/
+https://docs.djangoproject.com/en/4.2/intro/reusable-apps/
+
+======================================================================================================================================================================
+pip install Django
+=====================================================================================================================================================================
+sudo systemctl restart nginx
+sudo systemctl status nginx
+
+curl http://127.0.0.0:8001
+curl http://0.0.0.0:8001
+
+杀死相关进程（可进一步优化）：
+sudo lsof -i:8001
+sudo kill 进程号
+
+=====================================================================================================================================================================
+项目中导出所有相关库：
+pip freeze > requirements.txt
+=====================================================================================================================================================================
